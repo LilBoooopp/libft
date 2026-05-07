@@ -37,6 +37,15 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
+/**
+ * @brief Compares s1 and s2 over at least min characters.
+ * @param s1  First string.
+ * @param s2  Second string.
+ * @param min Minimum number of characters to compare. If ft_strlen(s1) < min,
+ *            min is used as the comparison length instead.
+ * @return Difference of the first differing unsigned char values, or 0 if
+ *         strings are equal over the determined length.
+ */
 int	ft_strmincmp(const char *s1, const char *s2, size_t min)
 {
 	size_t		i;
@@ -62,9 +71,11 @@ int	ft_strmincmp(const char *s1, const char *s2, size_t min)
 }
 
 /**
- * @brief compares s1 and s2 strings
- * @return 1 if there is a difference and 0 if the 2 strings are identical
- * @warning only works with strings ending in null
+ * @brief Compares two null-terminated strings lexicographically.
+ * @param s1 First string.
+ * @param s2 Second string.
+ * @return Negative if s1 < s2, 0 if equal, positive if s1 > s2.
+ *         Comparison is done using unsigned char values.
  */
 int	ft_strcmp(const char *s1, const char *s2)
 {

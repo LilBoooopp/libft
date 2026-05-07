@@ -12,6 +12,13 @@
 
 #include "../libft.h"
 
+/**
+ * @brief Builds a new string by applying f to each character of s.
+ * @param s String to map over.
+ * @param f Function called as f(index, s[index]); its return value becomes
+ *          the character at that position in the new string.
+ * @return Newly allocated result string, or NULL on allocation failure.
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;

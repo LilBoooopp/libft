@@ -12,6 +12,16 @@
 
 #include "../libft.h"
 
+/**
+ * @brief Builds a new list by applying f to each node's content.
+ * @param lst List to iterate over.
+ * @param f   Function applied to each content; its return value becomes the
+ *            new node's content.
+ * @param del Function used to free content if an allocation fails mid-way.
+ * @return Pointer to the first node of the new list, or NULL on alloc fail.
+ *         On failure the partial list is cleared via ft_lstclear before
+ *         returning NULL.
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*flst;

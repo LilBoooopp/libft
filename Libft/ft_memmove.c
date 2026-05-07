@@ -12,6 +12,15 @@
 
 #include "../libft.h"
 
+/**
+ * @brief Copies len bytes from src to dst, handling overlapping regions safely.
+ * @param dst Destination pointer.
+ * @param src Source pointer.
+ * @param len Number of bytes to copy.
+ * @return Pointer to dst, or NULL if both dst and src are NULL.
+ * @note When src < dst and regions overlap, bytes are copied back-to-front to
+ *       prevent corruption. Delegates to ft_memcpy when src >= dst.
+ */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*udst;

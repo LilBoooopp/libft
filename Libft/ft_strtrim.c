@@ -43,6 +43,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
+/**
+ * @brief Trims set characters from both ends of s1, then frees s1.
+ * @param s1  String to trim (will be freed).
+ * @param set Set of characters to remove from both ends.
+ * @return Newly allocated trimmed string, or NULL on allocation failure.
+ * @note s1 is freed regardless of whether the allocation succeeds.
+ */
 char	*ft_strtrim_free(char *s1, char const *set)
 {
 	char	*result;
@@ -52,6 +59,13 @@ char	*ft_strtrim_free(char *s1, char const *set)
 	return (result);
 }
 
+/**
+ * @brief Trims set characters from both ends of *s1 in place (no allocation).
+ * @param s1  Pointer to the string pointer; *s1 is advanced past leading chars
+ *            and a '\0' is written after the last non-set character.
+ * @param set Set of characters to remove.
+ * @note Mutates the original buffer. Does not free or reallocate memory.
+ */
 void	ft_strtrim_nc(char **s1, char const *set)
 {
 	char	*str;

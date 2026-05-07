@@ -13,10 +13,12 @@
 #include "../libft.h"
 
 /**
- * @brief realloc
- * @param void *ptr you want to realloc
- * @param size_t "sizeof(vartype) * size" to specify what 
- * 				type of size it needs to malloc
+ * @brief Resizes an allocation by copying up to size bytes to a new buffer.
+ * @param ptr  Pointer to the existing allocation (will be freed).
+ * @param size Size in bytes of the new allocation.
+ * @return Pointer to the new allocation, or NULL on failure.
+ * @warning Uses ft_strlcpy internally: only safe for char buffers. Does not
+ *          preserve bytes beyond the first null terminator in ptr.
  */
 void	*ft_realloc(void *ptr, size_t size)
 {

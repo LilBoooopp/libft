@@ -1,5 +1,11 @@
 #include "../libft.h"
 
+/**
+ * @brief Converts a long integer to a null-terminated string.
+ * @param n The long integer to convert.
+ * @return Newly allocated string representation of n, or NULL on alloc fail.
+ * @note Handles LONG_MIN correctly via unsigned arithmetic.
+ */
 char	*ft_ltoa(long n)
 {
 	unsigned long	uval;

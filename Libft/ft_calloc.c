@@ -13,9 +13,10 @@
 #include "../libft.h"
 
 /**
- * @brief malloc a pointer by setting everything to zero
- * @param size_t sizeof
- * @param size_t the quantity you want malloc
+ * @brief Allocates count * size bytes of zero-initialised memory.
+ * @param count Number of elements to allocate.
+ * @param size  Size in bytes of each element.
+ * @return Pointer to allocated zeroed memory, or NULL on failure.
  */
 
 void	*ft_calloc(size_t count, size_t size)
