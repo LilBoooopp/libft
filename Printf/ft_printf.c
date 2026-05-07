@@ -64,7 +64,7 @@ static int	check_args(const char *format, va_list list, int value, int i)
 	else if (format[i] == 'u')
 		value = unsigned_putnbr_pf(va_arg(list, int), &value);
 	else if (format[i] == 'x' || format[i] == 'X')
-		value = print_hex_pf(va_arg(list, unsigned long), &value, format[i]);
+		value = print_hex_pf(va_arg(list, unsigned int), &value, format[i]);
 	else if (format[i] == '%')
 		value = putchar_pf('%', value);
 	return (value);

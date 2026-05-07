@@ -19,7 +19,7 @@
  */
 char	*ft_strdup(const char *s1)
 {
-	int		i;
+	size_t	i;
 	char	*ptr;
 
 	i = 0;

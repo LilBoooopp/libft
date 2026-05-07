@@ -88,7 +88,10 @@ int	write_pointer_pf(unsigned long un, int *value)
 
 	dict = "0123456789abcdef";
 	if (un >= 16)
-		write_pointer_pf(un / 16, value);
+	{
+		if (write_pointer_pf(un / 16, value) == -1)
+			return (-1);
+	}
 	mod = un % 16;
 	(*value) = putchar_pf(dict[mod], (*value));
 	if ((*value) == -1)

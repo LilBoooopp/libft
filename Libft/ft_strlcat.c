@@ -23,12 +23,12 @@
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	dst_len;
+	size_t	i;
+	size_t	dst_len;
 
 	i = 0;
-	dst_len = (ft_strlen(dst));
-	if (ft_strlen(dst) >= dstsize)
+	dst_len = ft_strlen(dst);
+	if (dst_len >= dstsize)
 		return (ft_strlen(src) + dstsize);
 	while (i + dst_len < dstsize - 1 && src[i])
 	{

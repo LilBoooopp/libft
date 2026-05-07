@@ -49,29 +49,50 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
+int		ft_isblank(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_atoi(const char *str);
+int		ft_atoi_base(const char *str, int base);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strmincmp(const char *s1, const char *s2, size_t min);
+int		ft_str_startswith(const char *s, const char *prefix);
+int		ft_str_endswith(const char *s, const char *suffix);
+int		ft_tab_contains(char **tab, const char *str);
 
 char	*ft_itoa(int n);
+char	*ft_ltoa(long n);
+char	*ft_itoa_base(long n, int base);
 int		ft_is_negative(int n);
 char	*ft_strdup(const char *s1);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim_free(char *s1, char const *set);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin_free(char *s1, char *s2);
+char	*ft_strnjoin(char **tab, size_t n, char *sep);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strrev(char *s);
+char	*ft_tab_join(char **tab, char *sep);
 char	**ft_asort_char(char **tab);
 char	**ft_split(char const *s, char c);
+char	**ft_tab_dup(char **tab);
+char	**ft_tab_append(char **tab, char *str);
 
 long	ft_atol(const char *str);
+
+size_t	ft_count_char(const char *s, char c);
+
+int		ft_abs(int n);
+int		ft_max(int a, int b);
+int		ft_min(int a, int b);
+int		ft_clamp(int val, int lo, int hi);
 
 void	free_tab(char **tab);
 void	safe_free(void **ptr);
@@ -90,6 +111,7 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memdup(const void *src, size_t size);
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);

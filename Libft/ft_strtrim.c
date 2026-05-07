@@ -43,6 +43,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
+char	*ft_strtrim_free(char *s1, char const *set)
+{
+	char	*result;
+
+	result = ft_strtrim(s1, set);
+	free(s1);
+	return (result);
+}
+
 void	ft_strtrim_nc(char **s1, char const *set)
 {
 	char	*str;

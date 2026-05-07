@@ -19,7 +19,7 @@
  */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t		i;
 	unsigned char	*us1;
 	unsigned char	*us2;
 
@@ -39,10 +39,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 int	ft_strmincmp(const char *s1, const char *s2, size_t min)
 {
-	unsigned int	i;
+	size_t		i;
 	unsigned char	*us1;
 	unsigned char	*us2;
-	size_t			size;
+	size_t		size;
 
 	i = 0;
 	us1 = (unsigned char *) s1;
